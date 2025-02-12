@@ -3,6 +3,7 @@
     color: var(--default-font-color);
     font: var(--default-font);
     overflow: hidden;
+    position: relative;
 }
 
 .holidayCardHeaderContainer {
@@ -10,15 +11,24 @@
     grid-template-columns: minmax(70%, auto) 1fr; /* 2 columns, responsive */
 }
 
+.holidayCardDetailExpanderButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 /* Ensure grid adapts for smaller screens */
 @media (max-width: 768px) {
     .holidayCardHeaderContainer {
       grid-template-columns: 1fr; /* 1 column on smaller screens */
     }
+    .holidayCardDetailExpanderButton {
+        position: relative;
+    }
 }
 
 .holidayCardHeader {
-
+    padding: 0 1em;
 }
 
 .holidayCardHeaderContainer > div {
@@ -30,6 +40,6 @@
     width: 100%;
 }
 
-.holidayCardDetail {
+.holidayCardDetailExpanderContent {
     padding: 1em;
 }
