@@ -1,0 +1,9 @@
+.holidaySortPanel {
+    display: flex;
+    background: white;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(--default-font-color);
+    font: var(--default-font);
+    width: 100%;
+}
