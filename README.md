@@ -31,6 +31,8 @@
 - `npm run test`
 - `npm install ts-node --save-dev` - Realised ts-node wasn't installed
 - `npm install jest-environment-jsdom --save-dev` - Realised jsdom needs to be set
+- `npm install axios` - To grab JSON from API provided
+- `npm install identity-obj-proxy --save-dev` - Stop Jest processing CSS files
 
 ## Test Documentation
 
