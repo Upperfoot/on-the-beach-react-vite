@@ -32,6 +32,7 @@ test("renders HolidayCard Component", async () => {
     
     const { container: holidayCard } = render(<HolidayCard holiday={holiday} />);
 
-    expect(holidayCard.textContent).toEqual("Iberostar Grand Salome");
+    // Could use hotel.resort.overview
+    expect(holidayCard.textContent).toContain("The Iberostar Grand Salomehas an exceptional location in the south of Tenrife, overlooking the Atlantic Ocean. It is situated between the Golf del Sur and the Amarillo Golf Courses, and is an ideal hotel for families couples and groups who are looking for a holiday full of sport, sun and sea.");
     expect(holidayCard.textContent).not.toEqual("Does Not Exist");
 });
