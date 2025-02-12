@@ -1,3 +1,5 @@
 .holidayCardList {
-    
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em; /* Space between cards */
 }

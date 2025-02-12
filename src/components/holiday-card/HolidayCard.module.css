@@ -1,8 +1,35 @@
 .holidayCard {
-    display: flex;
     background: white;
-    flex-direction: column;
-    overflow: hidden;
     color: var(--default-font-color);
     font: var(--default-font);
+    overflow: hidden;
+}
+
+.holidayCardHeaderContainer {
+    display: grid;
+    grid-template-columns: minmax(70%, auto) 1fr; /* 2 columns, responsive */
+}
+
+/* Ensure grid adapts for smaller screens */
+@media (max-width: 768px) {
+    .holidayCardHeaderContainer {
+      grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+}
+
+.holidayCardHeader {
+
+}
+
+.holidayCardHeaderContainer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.holidayCardHeaderImage > img {
+    width: 100%;
+}
+
+.holidayCardDetail {
+    padding: 1em;
 }
