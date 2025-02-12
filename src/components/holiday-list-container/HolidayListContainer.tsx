@@ -1,3 +1,4 @@
+import { HolidaySortEnum, HolidaySortOrderEnum } from "../../types/holiday-sort.enum";
 import { Holiday } from "../../types/holiday.interface";
 import { HolidayCardList } from "../holiday-card-list/HolidayCardList";
 import { HolidaySortPanel } from "../holiday-sort-panel/HolidaySortPanel";
@@ -62,10 +63,15 @@ const holidayB: Holiday = {
 
 const holidayList: Holiday[] = [holidayA, holidayB];
 
+    // Function to update sorting order when our Sort Panel triggers
+    const handleSortOrderChange = (sort: HolidaySortEnum, order: HolidaySortOrderEnum) => {
+      console.log(sort, order);
+    };
+
     return (
       <div className={styles.holidayListContainer} data-testid="holiday-list-container">
         <div className={styles.holidayListContainerSort}>
-          <HolidaySortPanel />
+          <HolidaySortPanel defaultSort={HolidaySortEnum.ALPHABETICALLY} defaultOrder={HolidaySortOrderEnum.ASC} onSortOrderChanged={handleSortOrderChange}/>
         </div>
         <div className={styles.holidayListContainerList}>
           <HolidayCardList holidayList={holidayList} />
