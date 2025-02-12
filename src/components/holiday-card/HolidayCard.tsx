@@ -7,7 +7,7 @@ interface HolidayCardProps {
 
 export const HolidayCard: React.FC<HolidayCardProps> = ({ holiday }) => {
     return (
-      <div className={styles.holidayCard}>
+      <div className={styles.holidayCard} data-testid="holiday-card">
         { holiday.resort.name }
       </div>
     );

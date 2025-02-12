@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { HolidayCardList } from "./HolidayCardList";
 import { Holiday } from "../../types/holiday.interface";
 
@@ -57,10 +57,18 @@ test("renders HolidayCardList Component", async () => {
         }
       };
 
+    // Our List of Holidays
     const holidayList: Holiday[] = [holidayA, holidayB];
     
+    // Get our List Container
     const { container: holidayCardList } = render(<HolidayCardList holidayList={holidayList} />);
 
-    expect(holidayCardList.textContent).toEqual("Holiday Card List Here");
-    expect(holidayCardList.textContent).not.toEqual("Not Here At All");
+    // Scoped List
+    const holidayCardListScope = within(holidayCardList);
+
+    // Get our Holiday Cards by Test ID (these should be stripped by Babel or a Test/Live Mode via process.env)
+    const holidayCards = await holidayCardListScope.findAllByTestId('holiday-card');
+
+    // Should be a set of 2 results
+    expect(holidayCards.length).toBe(2);
 });
