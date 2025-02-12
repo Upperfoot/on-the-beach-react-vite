@@ -5,6 +5,7 @@
 ### Technology Choice Methodology
 
 - Using VSCode
+- It says to "You may use things like CSS Preprocessors and JavaScript build tools" so I'll be using Vite & 
 - Built in Vite (not using deprecated React App)
 - Chose not to use NextJS due to stipulation of "We are looking for a client side solution" - using standard React Components
 - Opted to use Typescript (as that's what I'm most familiar with), and allows me to showcase SOLID & DRY principles
@@ -12,6 +13,7 @@
 - Using Jest for Unit / Integration Testing
 - Using Testing Library for Component Testing
 - Elected to not use Contract Testing (PACT)
+- Elected to not use Cypress Testing for E2E Testing
 
 ### Principles Adhered
 
@@ -28,6 +30,7 @@
 - `npm install @testing-library/jest-dom --save-dev`
 - `npm run test`
 - `npm install ts-node --save-dev` - Realised ts-node wasn't installed
+- `npm install jest-environment-jsdom --save-dev` - Realised jsdom needs to be set
 
 ## Test Documentation
 
