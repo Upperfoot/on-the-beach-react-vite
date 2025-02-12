@@ -4,10 +4,10 @@ interface HotelCardProps {
     hotel: Hotel
 }
 
-export const HotelCard: React.FC<HotelCardProps> = () => {
+export const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
     return (
-      <div>
-        Hello
+      <div className="hotel-card">
+        { hotel.name }
       </div>
     );
   };
