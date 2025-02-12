@@ -19,13 +19,15 @@
 - DRY
 - TDD
 
-### Commands Ran during Exercise
+### Install Commands Ran during Exercise
 
 - `npm create vite@latest . -- --template react-ts`
 - `npm install jest --save-dev`
 - `npm install ts-jest @types/jest --save-dev`
 - `npm install @testing-library/react --save-dev`
 - `npm install @testing-library/jest-dom --save-dev`
+- `npm run test`
+- `npm install ts-node --save-dev` - Realised ts-node wasn't installed
 
 ## Test Documentation
 
