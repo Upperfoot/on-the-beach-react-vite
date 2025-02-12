@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { fireEvent, render, within } from "@testing-library/react";
 import { HolidayCard } from "./HolidayCard";
 import { Holiday } from "../../types/holiday.interface";
 
@@ -33,6 +33,21 @@ test("renders HolidayCard Component", async () => {
     const { container: holidayCard } = render(<HolidayCard holiday={holiday} />);
 
     // Could use hotel.resort.overview
-    expect(holidayCard.textContent).toContain("The Iberostar Grand Salomehas an exceptional location in the south of Tenrife, overlooking the Atlantic Ocean. It is situated between the Golf del Sur and the Amarillo Golf Courses, and is an ideal hotel for families couples and groups who are looking for a holiday full of sport, sun and sea.");
     expect(holidayCard.textContent).not.toEqual("Does Not Exist");
+
+    const holidayCardScope = within(holidayCard);
+
+    // Lets get the Expander Button
+    const priceButton = holidayCardScope.getByTestId("expander-button");
+
+    // Should not exist!
+    expect(holidayCardScope.findByTestId("expander-content")).rejects.toThrow();
+
+    // Lets click the button
+    fireEvent.click(priceButton);
+    
+    const overviewHeader = await holidayCardScope.getByTestId("expander-content");
+
+    // Should exist!
+    expect(overviewHeader).not.toBeNull();
 });

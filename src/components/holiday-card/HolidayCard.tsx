@@ -7,7 +7,7 @@ interface HolidayCardProps {
 }
 
 export const HolidayCard: React.FC<HolidayCardProps> = ({ holiday }) => {
-    const [expanded, setExpanded] = useState(true);
+    const [expanded, setExpanded] = useState(false);
 
     return (
       <article className={styles.holidayCard} data-testid="holiday-card">
@@ -23,11 +23,11 @@ export const HolidayCard: React.FC<HolidayCardProps> = ({ holiday }) => {
           </div>
         </div>
         <section className={styles.holidayCardDetail}>
-          <button className={styles.holidayCardDetailExpanderButton} onClick={() => setExpanded(!expanded)}>
+          <button data-testid="expander-button" className={styles.holidayCardDetailExpanderButton} onClick={() => setExpanded(!expanded)}>
             <strong>Read {expanded ? "less" : "more" }</strong> <span>about this hotel</span>
           </button>
           { expanded && 
-            <div className={styles.holidayCardDetailExpanderContent}>
+            <div className={styles.holidayCardDetailExpanderContent} data-testid="expander-content">
               <h3>Overview</h3>
               <p>{holiday.resort.overview}</p>
             </div>
