@@ -23,6 +23,10 @@
 - DRY
 - TDD
 
+### Decisions Taken
+
+- Will do Ordering on ASC/DESC on Sort (By switching on the same sort key)
+
 ### Install Commands Ran during Exercise
 
 - `npm create vite@latest . -- --template react-ts`
@@ -35,6 +39,7 @@
 - `npm install jest-environment-jsdom --save-dev` - Realised jsdom needs to be set
 - `npm install axios` - To grab JSON from API provided
 - `npm install identity-obj-proxy --save-dev` - Stop Jest processing CSS files
+- `npm install classnames` - To make it a bit easier to add lists of class names
 
 ## Test Documentation
 
