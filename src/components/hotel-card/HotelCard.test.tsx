@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { HotelCard } from "./HotelCard";
 import { Hotel } from "../../types/hotel.interface";
 
@@ -8,10 +8,8 @@ test("renders HotelCard Component", async () => {
         name: "Hello Hotel"
     };
     
-    render(<HotelCard hotel={hotel} />);
+    const { container: hotelCard } = render(<HotelCard hotel={hotel} />);
 
-    const hotelCard = await screen.findByText("Hello");
-
-    expect(hotelCard.textContent).toEqual("Hello");
+    expect(hotelCard.textContent).toEqual("Hello Hotel");
     expect(hotelCard.textContent).not.toEqual("Does Not Exist");
 });
