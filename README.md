@@ -4,11 +4,28 @@
 
 ### Technology Choice Methodology
 
+- Using VSCode
 - Built in Vite (not using deprecated React App)
 - Chose not to use NextJS due to stipulation of "We are looking for a client side solution" - using standard React Components
 - Opted to use Typescript (as that's what I'm most familiar with), and allows me to showcase SOLID & DRY principles
 - Using Latest Version of Node (v23.7.0) & NPM (v10.9.2) - Using NVM to choose versions
+- Using Jest for Unit / Integration Testing
+- Using Testing Library for Component Testing
+- Elected to not use Contract Testing (PACT)
 
+### Principles Adhered
+
+- SOLID
+- DRY
+- TDD
+
+### Commands Ran during Exercise
+
+- `npm create vite@latest . -- --template react-ts`
+- `npm install jest --save-dev`
+- `npm install ts-jest @types/jest --save-dev`
+- `npm install @testing-library/react --save-dev`
+- `npm install @testing-library/jest-dom --save-dev`
 
 ## Test Documentation
 
