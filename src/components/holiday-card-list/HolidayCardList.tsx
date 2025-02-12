@@ -9,7 +9,6 @@ interface HolidayCardListProps {
 export const HolidayCardList: React.FC<HolidayCardListProps> = ({ holidayList }) => {
     return (
       <div className={styles.holidayCardList}>
-        <span>Holiday Card List Here</span>
         {holidayList.map(holiday => 
             <HolidayCard key={holiday.resort.id} holiday={holiday} />
         )}
