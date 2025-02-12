@@ -6,4 +6,9 @@
     color: var(--default-font-color);
     font: var(--default-font);
     width: 100%;
+
+  position: sticky;
+  left: 0;
+  top: 1em;
+  align-self: start;
 }
