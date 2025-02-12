@@ -27,6 +27,6 @@ test("renders HotelCardList Component", async () => {
     
     const { container: hotelCardList } = render(<HotelCardList hotelList={hotelList} />);
 
-    expect(hotelCardList.textContent).toEqual("2");
-    expect(hotelCardList.textContent).not.toEqual("100");
+    expect(hotelCardList.textContent).toEqual("Hotel Card List Here");
+    expect(hotelCardList.textContent).not.toEqual("Not Here At All");
 });

@@ -1,3 +1,6 @@
 .hotelCard {
     display: flex;
+    background: white;
+    flex-direction: column;
+    overflow: hidden;
 }
