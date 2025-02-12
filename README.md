@@ -14,6 +14,8 @@
 - Using Testing Library for Component Testing
 - Elected to not use Contract Testing (PACT)
 - Elected to not use Cypress Testing for E2E Testing
+- Want to use Standard Modern CSS (No SCSS pre-processors) - I know this may limit me to up to date browsers, will refer to CANIUse
+- Will use CSS Grid Layouts 
 
 ### Principles Adhered
 
