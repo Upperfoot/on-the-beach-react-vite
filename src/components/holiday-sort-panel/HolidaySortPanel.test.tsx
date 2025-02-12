@@ -88,5 +88,5 @@ describe("testing for HolidaySortPanel", () => {
     // Expect the function to have been called once with "star_rating"
     expect(mockOnSortOrderChanged).toHaveBeenCalledTimes(3);
     expect(mockOnSortOrderChanged).toHaveBeenCalledWith(HolidaySortEnum.STAR_RATING, HolidaySortOrderEnum.ASC); // Should be changing the sort to STAR_RATING and resetting to ASC
-});
+  });
 })

@@ -49,7 +49,7 @@ export const HolidaySortPanel: React.FC<HolidaySortPanelProps> = ({ defaultSort,
           sort <strong>alphabetically</strong>
         </button>
         <button data-testid="sort-price" className={getActiveSortClass(HolidaySortEnum.PRICE)} onClick={() => setCurrentSortOrder(HolidaySortEnum.PRICE)}>
-          sort by<strong>price</strong>
+          sort by <strong>price</strong>
         </button>
         <button data-testid="sort-rating" className={getActiveSortClass(HolidaySortEnum.STAR_RATING)} onClick={() => setCurrentSortOrder(HolidaySortEnum.STAR_RATING)}>
           sort by <strong>star rating</strong>
