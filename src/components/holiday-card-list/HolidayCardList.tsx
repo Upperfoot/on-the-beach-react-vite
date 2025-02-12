@@ -10,7 +10,7 @@ export const HolidayCardList: React.FC<HolidayCardListProps> = ({ holidayList })
       <div className="holiday-card-list">
         <span>Holiday Card List Here</span>
         {holidayList.map(holiday => 
-            <HolidayCard holiday={holiday} />
+            <HolidayCard key={holiday.resort.id} holiday={holiday} />
         )}
       </div>
     );
