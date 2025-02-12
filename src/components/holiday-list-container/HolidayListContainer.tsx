@@ -4,9 +4,11 @@ import { HolidayCardList } from "../holiday-card-list/HolidayCardList";
 import { HolidaySortPanel } from "../holiday-sort-panel/HolidaySortPanel";
 import styles from "./HolidayListContainer.module.css";
 
+export const sortHolidays = (holidays: Holiday[], sort: HolidaySortEnum, order: HolidaySortOrderEnum) => {
+  return holidays;
+};
+
 export const HolidayListContainer: React.FC = () => {
-
-
   const holidayA: Holiday = {
     "resort": {
       "id": "7dd27e42-2b5c-4237-86ac-97c26f72eb5b",

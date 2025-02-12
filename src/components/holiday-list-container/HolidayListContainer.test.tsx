@@ -1,5 +1,5 @@
 import { render, within } from "@testing-library/react";
-import { HolidayListContainer } from "./HolidayListContainer";
+import { HolidayListContainer, sortHolidays } from "./HolidayListContainer";
 import { HolidaySortEnum, HolidaySortOrderEnum } from "../../types/holiday-sort.enum";
 import { Holiday } from "../../types/holiday.interface";
 
