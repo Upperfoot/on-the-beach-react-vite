@@ -1,9 +1,9 @@
 import './App.css'
-import { HotelCardList } from './components/hotel-card-list/HotelCardList'
-import { Hotel } from './types/hotel.interface';
+import { HolidayCardList } from './components/holiday-card-list/HolidayCardList'
+import { Holiday } from './types/holiday.interface';
 
 function App() {
-    const hotelA: Hotel = {
+    const holidayA: Holiday = {
         uuid: "test-uuid",
         name: "Hello Hotel",
         location: "Manchester",
@@ -13,7 +13,7 @@ function App() {
         summary: "Luxurious Hotel located in the heart of Manchester"
     };
 
-    const hotelB: Hotel = {
+    const holidayB: Holiday = {
         uuid: "test-uuid-2",
         name: "Hello Hotel 2",
         location: "Liverpool",
@@ -23,11 +23,11 @@ function App() {
         summary: "Luxurious Hotel located in the heart of Liverpool"
     };
 
-    const hotelList: Hotel[] = [hotelA, hotelB];
+    const holidayList: Holiday[] = [holidayA, holidayB];
 
   return (
     <>
-      <HotelCardList hotelList={hotelList} />
+      <HolidayCardList holidayList={holidayList} />
     </>
   )
 }
