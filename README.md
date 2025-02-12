@@ -26,6 +26,7 @@
 ### Decisions Taken
 
 - Will do Ordering on ASC/DESC on Sort (By switching on the same sort key)
+- I won't be using Reducers for this Task, and instead will be using simple State Management in the Container Component
 
 ### Install Commands Ran during Exercise
 
