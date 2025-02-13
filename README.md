@@ -34,6 +34,7 @@
 - Found that the latest Lint isn't working so fixed it with some help from ChatGPT!
 - Removed (correctly) unused dependencies using depcheck
 - Attached some Videos also! (Check the Video Folder!)
+- Added the Build Files to make it easier for the Assessor to View the results
 
 ### Install Commands Ran during Exercise
 
