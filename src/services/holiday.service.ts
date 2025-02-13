@@ -10,6 +10,9 @@ export class HolidayService {
             const response = await axios.get<Holiday[]>(API_URL); // I'm not manually mapping, just casting, the API may change in future however
             return response.data;
         } catch (error) {
+            // Log Error to Sentry / CloudWatch / StackDriver / Etc
+            console.log(error);
+            
             return []; // Return empty array if fetch fails
         }
     };

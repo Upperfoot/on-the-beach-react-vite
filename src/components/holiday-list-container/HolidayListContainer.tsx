@@ -30,7 +30,7 @@ export const HolidayListContainer: React.FC = () => {
         setUnsortedHolidays(holidays);
         setSortedHolidays(sortHolidays(holidays, defaultSort, defaultOrder));
       });
-    }, []);
+    });
 
     // Function to update sorting order when our Sort Panel triggers
     const handleSortOrderChange = (sort: HolidaySortEnum, order: HolidaySortOrderEnum) => {
