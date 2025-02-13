@@ -49,11 +49,11 @@ export const HolidaySortPanel: React.FC<HolidaySortPanelProps> = ({ defaultSort,
 
       if(currentOrder === HolidaySortOrderEnum.ASC) {
         return (
-          <span className="material-symbols-outlined">arrow_drop_up</span>
+          <span className="material-symbols-outlined">arrow_drop_down</span>
         );
       } else {
         return (
-          <span className="material-symbols-outlined">arrow_drop_down</span>
+          <span className="material-symbols-outlined">arrow_drop_up</span>
         );
       }
 
