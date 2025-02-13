@@ -3,6 +3,7 @@
     color: var(--default-font-color);
     font: var(--default-font);
     overflow: hidden;
+    text-align: left;
 }
 
 .holidayCardHeaderContainer {
@@ -10,7 +11,22 @@
     grid-template-columns: minmax(70%, auto) 1fr; /* 2 columns, responsive */
 }
 
+.holidayCardDetail h4 {
+    color: var(--dark-blue);
+    margin: 0;
+}
+
 .holidayCardDetailExpanderButton {
+    border: 1px solid transparent;
+    padding: 0.9em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    text-align: center;
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -67,11 +83,21 @@
 }
 
 .holidayCardButton {
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    text-align: center;
+
     background: var(--yellow);
     color: var(--dark-blue);
     margin: 0.5em 0;
     border-radius: 0.2em;
     font-weight: bold;
+    text-decoration: inherit;
 }
 
 .holidayCardButtonLargeText {

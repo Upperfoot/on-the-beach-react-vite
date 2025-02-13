@@ -57,7 +57,7 @@ export const HolidayCard: React.FC<HolidayCardProps> = ({ holiday }) => {
             <StarRating rating={holiday.resort.starRating} />
             <p>
               { partyKeyTypes.map((key, index, array) => (
-                <span>
+                <span key={key}>
                   {array.length > 1 && index > 0 && (index === array.length - 1 ? " & " : ", ")}
                   <strong>{ holiday.bookingDetails.party[key] }</strong> { getPlural(holiday.bookingDetails.party[key], key) }
                 </span>
@@ -83,7 +83,7 @@ export const HolidayCard: React.FC<HolidayCardProps> = ({ holiday }) => {
         <section className={styles.holidayCardDetail}>
           { expanded && 
             <div className={styles.holidayCardDetailExpanderContent} data-testid="expander-content">
-              <h3>Overview</h3>
+              <h4>Overview</h4>
               <p>{holiday.resort.overview}</p>
             </div>
           }

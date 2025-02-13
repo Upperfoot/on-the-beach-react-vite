@@ -20,7 +20,7 @@
 /* Ensure grid adapts for smaller screens */
 @media (max-width: 1024px) {
     .holidayListContainer {
-      padding: 1em;
+      padding: 0;
       grid-template-columns: 1fr; /* 1 column on smaller screens */
     }
 
