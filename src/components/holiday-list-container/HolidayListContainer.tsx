@@ -39,12 +39,12 @@ export const HolidayListContainer: React.FC = () => {
 
     return (
       <div className={styles.holidayListContainer} data-testid="holiday-list-container">
-        <div className={styles.holidayListContainerSort}>
+        <nav className={styles.holidayListContainerSort}>
           <HolidaySortPanel defaultSort={HolidaySortEnum.ALPHABETICALLY} defaultOrder={HolidaySortOrderEnum.ASC} onSortOrderChanged={handleSortOrderChange}/>
-        </div>
-        <div className={styles.holidayListContainerList}>
+        </nav>
+        <main className={styles.holidayListContainerList}>
           <HolidayCardList holidayList={sortedHolidays} />
-        </div>
+        </main>
       </div>
     );
   };
