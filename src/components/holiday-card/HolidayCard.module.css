@@ -3,7 +3,6 @@
     color: var(--default-font-color);
     font: var(--default-font);
     overflow: hidden;
-    position: relative;
 }
 
 .holidayCardHeaderContainer {
@@ -15,25 +14,39 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    background: white;
+    color: var(--default-font-color);
+    display: flex;
+    align-items: center;
 }
 
 /* Ensure grid adapts for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .holidayCardHeaderContainer {
       grid-template-columns: 1fr; /* 1 column on smaller screens */
-    }
-    .holidayCardDetailExpanderButton {
-        position: relative;
     }
 }
 
 .holidayCardHeader {
-    padding: 0 1em;
+    padding: 1em;
+}
+
+
+.holidayCardHeader p {
+    margin: 0;
+}
+
+.holidayCardHeader h3 {
+    margin: 0;
 }
 
 .holidayCardHeaderContainer > div {
     display: flex;
     flex-direction: column;
+}
+
+.holidayCardHeaderImage {
+    position: relative;
 }
 
 .holidayCardHeaderImage > img {

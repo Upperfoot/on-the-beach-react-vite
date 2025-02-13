@@ -12,12 +12,31 @@
     align-self: start;
 }
 
+.holidaySortPanelContent {
+    display: grid;
+    grid-template-columns: 1fr; /* 2 columns, responsive */
+}
+
 .holidaySortPanelButton {
     background: white;
     color: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 } 
 
 .holidaySortPanelButton.selected {
     color: white;
     background: var(--dark-blue);
+}
+
+/* Ensure grid adapts for smaller screens */
+@media (max-width: 1024px) {
+    .holidaySortPanelContent {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* 2 columns, responsive */
+    }
+    .holidaySortPanelButtonInnerText {
+        display: none;
+    }
 }

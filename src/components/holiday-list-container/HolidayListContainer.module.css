@@ -7,15 +7,6 @@
     box-sizing: border-box;
 }
 
-
-/* Ensure grid adapts for smaller screens */
-@media (max-width: 768px) {
-    .holidayListContainer {
-      padding: 1em;
-      grid-template-columns: 1fr; /* 1 column on smaller screens */
-    }
-}
-
 .holidayListContainerSort {
   display: flex;
   width: 100%;
@@ -23,4 +14,19 @@
 
 .holidayListContainerList {
   display: flex;
+}
+
+
+/* Ensure grid adapts for smaller screens */
+@media (max-width: 1024px) {
+    .holidayListContainer {
+      padding: 1em;
+      grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+
+    .holidayListContainerSort {
+      position: sticky;
+      z-index: 999;
+      top: 0;
+    }
 }

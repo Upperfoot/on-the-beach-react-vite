@@ -42,21 +42,55 @@ export const HolidaySortPanel: React.FC<HolidaySortPanelProps> = ({ defaultSort,
       });
     };
 
+    const getSortIcon = (sortType: HolidaySortEnum) => {
+      if(sortType !== currentSort) {
+        return;
+      }
+
+      if(currentOrder === HolidaySortOrderEnum.ASC) {
+        return (
+          <span className="material-symbols-outlined">arrow_drop_up</span>
+        );
+      } else {
+        return (
+          <span className="material-symbols-outlined">arrow_drop_down</span>
+        );
+      }
+
+    }
+
     // I could iterate across an array of Sort Objects but I'm keen to move quickly, not quite DRY but I'm aware its not
     return (
       <div className={styles.holidaySortPanel}>
-        <button data-testid="sort-alphabetically" className={getActiveSortClass(HolidaySortEnum.ALPHABETICALLY)} onClick={() => setCurrentSortOrder(HolidaySortEnum.ALPHABETICALLY)}>
-          sort <strong>alphabetically</strong> 
-          <span className="icon material-symbols-outlined">sort_by_alpha</span>
-        </button>
-        <button data-testid="sort-price" className={getActiveSortClass(HolidaySortEnum.PRICE)} onClick={() => setCurrentSortOrder(HolidaySortEnum.PRICE)}>
-          sort by <strong>price</strong>
-          <span className="icon material-symbols-outlined">currency_pound</span>
-        </button>
-        <button data-testid="sort-rating" className={getActiveSortClass(HolidaySortEnum.STAR_RATING)} onClick={() => setCurrentSortOrder(HolidaySortEnum.STAR_RATING)}>
-          sort by <strong>star rating</strong>
-          <span className="icon material-symbols-outlined">star</span>
-        </button>
+        <div className={styles.holidaySortPanelContent}>
+          <button data-testid="sort-alphabetically" className={getActiveSortClass(HolidaySortEnum.ALPHABETICALLY)} onClick={() => setCurrentSortOrder(HolidaySortEnum.ALPHABETICALLY)}>
+            <span className={styles.holidaySortPanelButtonText}>
+              <span className={styles.holidaySortPanelButtonInnerText}>
+                sort <strong>alphabetically</strong>
+              </span>
+              {getSortIcon(HolidaySortEnum.ALPHABETICALLY)}
+            </span>
+            <span className={classNames(styles.holidaySortPanelButtonIcon, 'material-symbols-outlined')}>sort_by_alpha</span>
+          </button>
+          <button data-testid="sort-price" className={getActiveSortClass(HolidaySortEnum.PRICE)} onClick={() => setCurrentSortOrder(HolidaySortEnum.PRICE)}>
+            <span className={styles.holidaySortPanelButtonText}>
+              <span className={styles.holidaySortPanelButtonInnerText}>
+                sort by <strong>price</strong>
+              </span> 
+              {getSortIcon(HolidaySortEnum.PRICE)}
+            </span>
+            <span className={classNames(styles.holidaySortPanelButtonIcon, 'material-symbols-outlined')}>currency_pound</span>
+          </button>
+          <button data-testid="sort-rating" className={getActiveSortClass(HolidaySortEnum.STAR_RATING)} onClick={() => setCurrentSortOrder(HolidaySortEnum.STAR_RATING)}>
+            <span className={styles.holidaySortPanelButtonText}>
+              <span className={styles.holidaySortPanelButtonInnerText}>
+                sort by <strong>star rating</strong>
+              </span>
+            </span>
+            {getSortIcon(HolidaySortEnum.STAR_RATING)}
+            <span className={classNames(styles.holidaySortPanelButtonIcon, 'material-symbols-outlined')}>star</span>
+          </button>
+        </div>
       </div>
     );
   };

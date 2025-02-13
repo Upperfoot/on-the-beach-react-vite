@@ -14,18 +14,23 @@ export const HolidayCard: React.FC<HolidayCardProps> = ({ holiday }) => {
         <div className={styles.holidayCardHeaderContainer}>
           <div className={styles.holidayCardHeaderImage}>
             <img src={holiday.resort.image.url} alt={holiday.resort.image.description} />
+            <button data-testid="expander-button" className={styles.holidayCardDetailExpanderButton} onClick={() => setExpanded(!expanded)}>
+              <span>
+                <strong>Read {expanded ? "less" : "more" }</strong> about this hotel  
+              </span>          
+              <span className="material-symbols-outlined">
+                {expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_right' }
+              </span>
+            </button>
           </div>
           <div className={styles.holidayCardHeader}>
             <header>
-              <h2>{ holiday.resort.name }</h2>
+              <h3>{ holiday.resort.name }</h3>
             </header>
             <p>{ holiday.resort.regionName}, { holiday.resort.countryName}</p>
           </div>
         </div>
         <section className={styles.holidayCardDetail}>
-          <button data-testid="expander-button" className={styles.holidayCardDetailExpanderButton} onClick={() => setExpanded(!expanded)}>
-            <strong>Read {expanded ? "less" : "more" }</strong> <span>about this hotel</span>
-          </button>
           { expanded && 
             <div className={styles.holidayCardDetailExpanderContent} data-testid="expander-content">
               <h3>Overview</h3>
