@@ -5,7 +5,7 @@ const API_URL = "https://static.onthebeach.co.uk/fe-code-test/data.json"; // Usi
 
 export class HolidayService {
     // If the API had Sort / Order Functions, I would pass this as a Parameter
-    fetchAll = async (): Promise<Holiday[]> => {
+    async fetchAll(): Promise<Holiday[]> {
         try {
             const response = await axios.get<Holiday[]>(API_URL); // I'm not manually mapping, just casting, the API may change in future however
             return response.data;
