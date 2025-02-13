@@ -29,6 +29,7 @@
 - I won't be using Reducers for this Task, and instead will be using simple State Management in the Container Component
 - I won't be using pluralisation or multilingual libraries (through i18n) for this
 - I won't be using Moment (as its a bit heavy), will be using date-fns instead
+- I could throw buttons into their own components, but for simplicity I've elected to forgo that
 
 ### Install Commands Ran during Exercise
 
