@@ -25,12 +25,14 @@ export const HolidayListContainer: React.FC = () => {
     const defaultSort = HolidaySortEnum.ALPHABETICALLY;
     const defaultOrder = HolidaySortOrderEnum.ASC;
 
+    // Disabling this Linting Warning
     useEffect(() => {
       holidayService.fetchAll().then((holidays: Holiday[]) => {
         setUnsortedHolidays(holidays);
         setSortedHolidays(sortHolidays(holidays, defaultSort, defaultOrder));
       });
-    });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     // Function to update sorting order when our Sort Panel triggers
     const handleSortOrderChange = (sort: HolidaySortEnum, order: HolidaySortOrderEnum) => {

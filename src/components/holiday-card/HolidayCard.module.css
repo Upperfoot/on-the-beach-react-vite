@@ -8,7 +8,7 @@
 
 .holidayCardHeaderContainer {
     display: grid;
-    grid-template-columns: minmax(70%, auto) 1fr; /* 2 columns, responsive */
+    grid-template-columns: minmax(65%, 35%) 1fr; /* 2 columns, responsive */
 }
 
 .holidayCardDetail h4 {
