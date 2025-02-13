@@ -30,6 +30,7 @@
 - I won't be using pluralisation or multilingual libraries (through i18n) for this
 - I won't be using Moment (as its a bit heavy), will be using date-fns instead
 - I could throw buttons into their own components, but for simplicity I've elected to forgo that
+- Will look at Linting also as NFR
 
 ### Install Commands Ran during Exercise
 
