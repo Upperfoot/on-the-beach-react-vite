@@ -66,25 +66,31 @@ export const HolidaySortPanel: React.FC<HolidaySortPanelProps> = ({ defaultSort,
           <button data-testid="sort-alphabetically" className={getActiveSortClass(HolidaySortEnum.ALPHABETICALLY)} onClick={() => setCurrentSortOrder(HolidaySortEnum.ALPHABETICALLY)}>
             <span className={styles.holidaySortPanelButtonText}>
               <span className={styles.holidaySortPanelButtonInnerText}>
-                sort <strong>alphabetically</strong>
+                <span>sort</span>
+                &nbsp;
+                <strong className={styles.holidaySortPanelButtonInnerTextLarge}>alphabetically</strong>
+                <strong className={styles.holidaySortPanelButtonInnerTextSmall}>name</strong>
               </span>
-              {getSortIcon(HolidaySortEnum.ALPHABETICALLY)}
             </span>
+            {getSortIcon(HolidaySortEnum.ALPHABETICALLY)}
             <span className={classNames(styles.holidaySortPanelButtonIcon, 'material-symbols-outlined')}>sort_by_alpha</span>
           </button>
           <button data-testid="sort-price" className={getActiveSortClass(HolidaySortEnum.PRICE)} onClick={() => setCurrentSortOrder(HolidaySortEnum.PRICE)}>
             <span className={styles.holidaySortPanelButtonText}>
               <span className={styles.holidaySortPanelButtonInnerText}>
-                sort by <strong>price</strong>
+                <span>sort by</span> <strong>price</strong>
               </span> 
-              {getSortIcon(HolidaySortEnum.PRICE)}
             </span>
+            {getSortIcon(HolidaySortEnum.PRICE)}
             <span className={classNames(styles.holidaySortPanelButtonIcon, 'material-symbols-outlined')}>currency_pound</span>
           </button>
           <button data-testid="sort-rating" className={getActiveSortClass(HolidaySortEnum.STAR_RATING)} onClick={() => setCurrentSortOrder(HolidaySortEnum.STAR_RATING)}>
             <span className={styles.holidaySortPanelButtonText}>
               <span className={styles.holidaySortPanelButtonInnerText}>
-                sort by <strong>star rating</strong>
+              <span>sort by</span>
+              &nbsp;
+              <strong className={styles.holidaySortPanelButtonInnerTextLarge}>star rating</strong>
+              <strong className={styles.holidaySortPanelButtonInnerTextSmall}>rating</strong>
               </span>
             </span>
             {getSortIcon(HolidaySortEnum.STAR_RATING)}

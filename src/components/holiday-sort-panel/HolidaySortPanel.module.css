@@ -31,12 +31,31 @@
     background: var(--dark-blue);
 }
 
+.holidaySortPanelButtonInnerTextSmall {
+    display: none;
+}
+
 /* Ensure grid adapts for smaller screens */
 @media (max-width: 1024px) {
+    .holidaySortPanelButtonInnerTextSmall {
+        display: inline;
+    }
+    .holidaySortPanelButtonInnerTextLarge {
+        display: none;
+    }
+
+    .holidaySortPanelButtonInnerText span {
+        display: none;    
+    }
+
+    .holidaySortPanelButtonInnerText {
+        font-size: 75%;
+        align-content: start;
+        align-items: start;
+        display: flex;
+    }
+
     .holidaySortPanelContent {
         grid-template-columns: repeat(3, minmax(0, 1fr)); /* 2 columns, responsive */
-    }
-    .holidaySortPanelButtonInnerText {
-        display: none;
     }
 }
