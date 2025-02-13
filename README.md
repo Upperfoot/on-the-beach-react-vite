@@ -27,6 +27,8 @@
 
 - Will do Ordering on ASC/DESC on Sort (By switching on the same sort key)
 - I won't be using Reducers for this Task, and instead will be using simple State Management in the Container Component
+- I won't be using pluralisation or multilingual libraries (through i18n) for this
+- I won't be using Moment (as its a bit heavy), will be using date-fns instead
 
 ### Install Commands Ran during Exercise
 
@@ -42,6 +44,7 @@
 - `npm install identity-obj-proxy --save-dev` - Stop Jest processing CSS files
 - `npm install classnames` - To make it a bit easier to add lists of class names
 - `npm install axios` - To Communicate with API via HTTP
+- `npm install date-fns` - To format date!
 
 ## Test Documentation
 
