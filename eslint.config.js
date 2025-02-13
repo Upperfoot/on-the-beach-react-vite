@@ -4,6 +4,7 @@ import tsParser from "@typescript-eslint/parser";
 import tsPlugin from "@typescript-eslint/eslint-plugin"; // ✅ Import ESLint Plugin
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+import unusedImports from "eslint-plugin-unused-imports";
 import jest from "eslint-plugin-jest";
 import jsxA11Y from "eslint-plugin-jsx-a11y";
 
@@ -24,6 +25,7 @@ export default tseslint.config(
       "react-hooks": reactHooks,
       "jsx-a11y": jsxA11Y,
       jest,
+      "unused-imports": unusedImports,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -32,6 +34,7 @@ export default tseslint.config(
       "react/jsx-pascal-case": "off", // ✅ Ignore naming warnings
       "no-unused-vars": "off", // ✅ Avoid duplicate rule
       "@typescript-eslint/no-unused-vars": ["warn", { ignoreRestSiblings: true }],
+      "unused-imports/no-unused-imports": "error",
       "jest/no-disabled-tests": "warn",
       "jest/no-focused-tests": "error",
       "jest/no-identical-title": "error",
