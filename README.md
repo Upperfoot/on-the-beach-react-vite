@@ -32,6 +32,7 @@
 - I could throw buttons into their own components, but for simplicity I've elected to forgo that
 - Will look at Linting also as NFR
 - Found that the latest Lint isn't working so fixed it with some help from ChatGPT!
+- Removed (correctly) unused dependencies using depcheck
 
 ### Install Commands Ran during Exercise
 
@@ -48,7 +49,8 @@
 - `npm install classnames` - To make it a bit easier to add lists of class names
 - `npm install axios` - To Communicate with API via HTTP
 - `npm install date-fns` - To format date!
-- 
+- `npm run lint` - To run linting
+- `npx depcheck` - Global to see if there are any unused dependencies we can remove
 
 ## Test Documentation
 
